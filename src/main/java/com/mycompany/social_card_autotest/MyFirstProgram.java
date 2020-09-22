@@ -19,7 +19,7 @@ public class MyFirstProgram {
             System.out.println(args[i]);
         }
          */
-        MySecondClass M = new MySecondClass(6);
+        MySecondClass M = new MySecondClass(5);
         M.Show();
         System.out.println(M.get_i(0));
         M.redact_i(0, 2);
@@ -28,9 +28,7 @@ public class MyFirstProgram {
 }
 
 class MySecondClass {
-
     private int[] x;
-
     public MySecondClass(int lenght) {
         this.x = new int[lenght];
         for (int i = 0; i < lenght; i++) {
