@@ -5,13 +5,11 @@
  */
 package Api_Tests;
 
-import static Api_Tests.Abstract_test.baseUrl;
-import static Api_Tests.Abstract_test.path_login;
+
 import static io.restassured.RestAssured.given;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
-import java.util.ArrayList;
 import java.util.List;
 import org.json.JSONObject;
 
@@ -21,7 +19,7 @@ import org.json.JSONObject;
  */
 public abstract class Abstract_request {
 
-    public Response post(String host, String path, JSONObject request_body, List<Header> list) {
+    protected Response post(String host, String path, JSONObject request_body, List<Header> list) {
         Headers header = new Headers(list);
         Response r = given()
                 .headers(header)
@@ -34,7 +32,7 @@ public abstract class Abstract_request {
         return r;
     }
 
-    public Response post(String host, String path, JSONObject request_body) {
+    protected Response post(String host, String path, JSONObject request_body) {
         Response r = given()
                 .baseUri(host)
                 .contentType("application/json")
@@ -44,7 +42,7 @@ public abstract class Abstract_request {
         return r;
     }
 
-    public Response get(String host, String path, List<Header> list) {
+    protected Response get(String host, String path, List<Header> list) {
 
         Headers header = new Headers(list);
         Response r = given()
@@ -57,7 +55,7 @@ public abstract class Abstract_request {
 
     }
 
-    public Response get(String host, String path) {
+    protected Response get(String host, String path) {
 
         Response r = given()
                 .baseUri(host)

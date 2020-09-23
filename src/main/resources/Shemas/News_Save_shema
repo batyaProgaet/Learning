@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "date": "2020-09-23T10:56:31.935Z",
+      "displayPeriod": null,
+      "fullText": "Тексттекст",
+      "id": 716,
+      "images": null,
+      "mainImage": null,
+      "previewImage": null,
+      "placeInDesktopVersion": true,
+      "placeInMobileVersion": true,
+      "position": "1 строка",
+      "source": null,
+      "state": "Создан",
+      "teaserText": "Анонс",
+      "title": "Заголовок123",
+      "type": "Новости",
+      "videoUrls": null,
+      "afishaDetails": null
+    }
+  ],
+  "required": [
+    "date",
+    "displayPeriod",
+    "fullText",
+    "id",
+    "images",
+    "mainImage",
+    "previewImage",
+    "placeInDesktopVersion",
+    "placeInMobileVersion",
+    "position",
+    "source",
+    "state",
+    "teaserText",
+    "title",
+    "type",
+    "videoUrls",
+    "afishaDetails"
+  ],
+  "properties": {
+    "date": {
+      "$id": "#/properties/date",
+      "type": "string",
+      "title": "The date schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-09-23T10:56:31.935Z"
+      ]
+    },
+    "displayPeriod": {
+      "$id": "#/properties/displayPeriod",
+      "type": "null",
+      "title": "The displayPeriod schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "fullText": {
+      "$id": "#/properties/fullText",
+      "type": "string",
+      "title": "The fullText schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Тексттекст"
+      ]
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        716
+      ]
+    },
+    "images": {
+      "$id": "#/properties/images",
+      "type": "null",
+      "title": "The images schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "mainImage": {
+      "$id": "#/properties/mainImage",
+      "type": "null",
+      "title": "The mainImage schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "previewImage": {
+      "$id": "#/properties/previewImage",
+      "type": "null",
+      "title": "The previewImage schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "placeInDesktopVersion": {
+      "$id": "#/properties/placeInDesktopVersion",
+      "type": "boolean",
+      "title": "The placeInDesktopVersion schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "placeInMobileVersion": {
+      "$id": "#/properties/placeInMobileVersion",
+      "type": "boolean",
+      "title": "The placeInMobileVersion schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "position": {
+      "$id": "#/properties/position",
+      "type": "string",
+      "title": "The position schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "1 строка"
+      ]
+    },
+    "source": {
+      "$id": "#/properties/source",
+      "type": "null",
+      "title": "The source schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "state": {
+      "$id": "#/properties/state",
+      "type": "string",
+      "title": "The state schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Создан"
+      ]
+    },
+    "teaserText": {
+      "$id": "#/properties/teaserText",
+      "type": "string",
+      "title": "The teaserText schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Анонс"
+      ]
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string",
+      "title": "The title schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Заголовок123"
+      ]
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The type schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Новости"
+      ]
+    },
+    "videoUrls": {
+      "$id": "#/properties/videoUrls",
+      "type": "null",
+      "title": "The videoUrls schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "afishaDetails": {
+      "$id": "#/properties/afishaDetails",
+      "type": "null",
+      "title": "The afishaDetails schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    }
+  },
+  "additionalProperties": true
+}

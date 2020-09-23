@@ -5,9 +5,7 @@
  */
 package Api_Tests;
 
-import static io.restassured.RestAssured.given;
 import io.restassured.http.Header;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import io.restassured.response.Response;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +16,9 @@ import org.junit.jupiter.api.Test;
 public abstract class Abstract_test extends Abstract_request {
 
     public static final String baseUrl = "https://ucso-test.opencode.su";
-    public static final String path_login = "/api/oauth/token";
+    private static final String path_login = "/api/oauth/token";
     public static String token = ""; // положим сюды токен
 
-    //param 
     private Response x;
     protected Response response;
 

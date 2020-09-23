@@ -1,36 +1,30 @@
 package Api_Tests;
 
-import io.restassured.RestAssured;
-import static io.restassured.RestAssured.given;
+import Body.Bodys;
 import io.restassured.http.Header;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import java.util.ArrayList;
-import java.util.List;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.json.JSONObject;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
-public class Api_portal_service_news_getPosts extends Abstract_test {
+import java.util.ArrayList;
+import java.util.List;
 
-    private static String path = "/api/portal-service/news/getPosts?pageNumber=0&pageSize=1&state=ALL&sortDirection=ASC&searchString=&sortFields=id&type=NEWS";
-    //private static String Path_afisha = "/api/portal-service/news/getPosts?pageNumber=0&pageSize=1&state=ALL&sortDirection=ASC&searchString=&sortFields=id&type=AFISHA";
-    //private static String Path_createNews = "";
+import static Body.Bodys.*;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
+public class Portal_service_news_savePost extends Abstract_test {
+    private String path = "api/portal-service/news/savePost";
 
     @BeforeEach
-    public void req() {
+    public void X() {
         List<Header> headers = new ArrayList<Header>();
         headers.add(new Header("Cookie", token));
-        response = get(baseUrl, path, headers);
+        JSONObject requestParams = new JSONObject(Save_post_body);
+        response = post(baseUrl, path, requestParams, headers);
+
+
     }
 
     @Test
@@ -40,7 +34,7 @@ public class Api_portal_service_news_getPosts extends Abstract_test {
         try {
             response.then()
                     .assertThat()
-                    .body(matchesJsonSchemaInClasspath("Shemas/News_shema.json"));
+                    .body(matchesJsonSchemaInClasspath("Shemas/News_Save_shema"));
         } catch (java.lang.AssertionError e) {
             Assertions.fail("Shema is FALSE");
         }
@@ -85,11 +79,12 @@ public class Api_portal_service_news_getPosts extends Abstract_test {
         Assertions.assertEquals(response.getStatusCode(), 403, "Uncorrect status code");
     }
 
-    
-    
-    
-    @AfterEach// @AfterAll
-    public void t2() {
 
-    }
+
+
+
+
+
+
+
 }
