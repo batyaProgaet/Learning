@@ -17,11 +17,11 @@ public class MySecondClass {
         }
     }
 
-    int get_i(int i) {
+    int GetI(int i) {
         return x[i];
     }
 
-    void redact_i(int i, int value) {
+    void RedactI(int i, int value) {
         x[i] = value;
     }
 
