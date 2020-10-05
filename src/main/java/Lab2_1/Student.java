@@ -22,6 +22,8 @@ package Lab2_1;
 
 import com.sun.org.apache.xpath.internal.operations.String;
 
+import java.util.Arrays;
+
 class Student {
     private String lastname;
     private int[] marks;
@@ -31,8 +33,6 @@ class Student {
         this.lastname = lastname;
         marks = new int[size];
         subjects = new String[size];
-
-
     }
 
 
@@ -72,18 +72,18 @@ class Student {
         }
     }
 
-
     public int GetLengths() {
         return subjects.length;
     }
 
 
     public void CreateSubjectMark(String subj, int mark) {
-        this.marks = new int[marks.length];
-        this.subjects = new String[subjects.length];
-        marks[marks.length - 1] = mark;
-        subjects[subjects.length - 1] = subj;
+        int[] tmp = Arrays.copyOf(marks, marks.length + 1);
+        String[] tmp1 = Arrays.copyOf(subjects, subjects.length + 1);
+        tmp[marks.length] = mark;
+        tmp1[subjects.length] = subj;
+        this.marks = Arrays.copyOf(tmp, tmp.length);
+        this.subjects = Arrays.copyOf(tmp1, tmp1.length);
     }
-
 
 }
