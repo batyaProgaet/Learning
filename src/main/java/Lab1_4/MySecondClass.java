@@ -22,15 +22,15 @@ public class MySecondClass {
         }
     }
 
-    int GetI(int i) {
+    int getI(int i) {
         return x[i];
     }
 
-    void RedactI(int i, int value) {
+    void redactI(int i, int value) {
         x[i] = value;
     }
 
-    void Show() {
+    void show() {
         for (int i = 0; i < x.length; i++) {
             System.out.println(x[i]);
         }

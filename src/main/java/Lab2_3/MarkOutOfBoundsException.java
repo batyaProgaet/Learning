@@ -5,8 +5,6 @@ package Lab2_3;
 дублирования предметов DuplicateSubjectException (объявляемое).
 Изменить методы классов так, чтобы они корректно обрабатывали ошибки и выбрасывали исключения.
  */
-
-
 public class MarkOutOfBoundsException { //необъявляемое
 
 
