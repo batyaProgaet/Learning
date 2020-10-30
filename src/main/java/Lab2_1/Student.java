@@ -25,65 +25,63 @@ import com.sun.org.apache.xpath.internal.operations.String;
 import java.util.Arrays;
 
 class Student {
-    private String lastname;
-    private int[] marks;
-    private String[] subjects;
 
-    public Student(String lastname, int size) {
-        this.lastname = lastname;
-        marks = new int[size];
-        subjects = new String[size];
+    String fistname; // Фамилия студента
+    int marks[]; // оценки
+    String[] subjects;
+
+    public Student(String fistname, int length) {
+        this.fistname = fistname;
+        this.marks = new int[length];
+        this.subjects = new String[length];
     }
 
-
-    public String GetLastname() {
-        return lastname;
+    public String getFistname() {
+        return fistname;
     }
 
-    public void RedLastname(String NewLastname) {
-        lastname = NewLastname;
+    public void setFistname(String fistname) {
+        this.fistname = fistname;
     }
 
-    public int GetMarks(int i) {
+    public int getMarks(int i) {
         return marks[i];
     }
 
-    public void RedMarks(int i, int value) {
-        marks[i] = value;
+    public void setMarks(int i, int mark) {
+        this.marks[i] = mark;
     }
 
-    public void ShowMarks() {
+    public void showMarks() {
         for (int i = 0; i < marks.length; i++) {
             System.out.println(marks[i]);
         }
     }
 
-    public String GetSubject(int i) {
+    public String getSubjects(int i) {
         return subjects[i];
     }
 
-    public void RedSubject(int i, String value) {
-        subjects[i] = value;
+    public void setSubjects(int i, String subject) {
+        this.subjects[i] = subject;
     }
 
-    public void ShowSubjects() {
+    public void showSubjects() {
         for (int i = 0; i < subjects.length; i++) {
             System.out.println(subjects[i]);
         }
     }
 
-    public int GetLengths() {
-        return subjects.length;
+    public void addMarkAndSubject(int mark, String subject) {
+        this.marks = Arrays.copyOf(this.marks, this.marks.length);
+        this.marks[this.marks.length - 1] = mark;
+        this.subjects = Arrays.copyOf(this.subjects, this.subjects.length);
+        this.subjects[this.subjects.length - 1] = subject;
     }
 
-
-    public void CreateSubjectMark(String subj, int mark) {
-        int[] tmp = Arrays.copyOf(marks, marks.length + 1);
-        String[] tmp1 = Arrays.copyOf(subjects, subjects.length + 1);
-        tmp[marks.length] = mark;
-        tmp1[subjects.length] = subj;
-        this.marks = Arrays.copyOf(tmp, tmp.length);
-        this.subjects = Arrays.copyOf(tmp1, tmp1.length);
+    public int getLength() {
+        return this.marks.length;
     }
+
 
 }

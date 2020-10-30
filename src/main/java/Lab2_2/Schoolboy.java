@@ -12,13 +12,18 @@ package Lab2_2;
 import com.sun.org.apache.xpath.internal.operations.String;
 
 public class Schoolboy {
-    public Register[] x;
+    String fistname; // Фамилия студента
+    Register[] reg;
 
-public class Register{
-    private String lastname;
-    private int[] marks;
-    private String[] subjects;
-}
+
+    // что значит функциональность, схожу с классом?
+
+
+
+    private class Register{
+        int marks[]; // оценки
+        String[] subjects;
+    }
 
 
 }
